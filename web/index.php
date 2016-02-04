@@ -1,8 +1,9 @@
 <?php
 
 require_once('../autoloader.php');
-require_once('../Config/Config.php');
-require_once('../Core/Router.php');
+require_once('../Config/routing.php');
+
+use Core\Router;
 
 $uri = $_SERVER['REQUEST_URI'];
 $dir = __DIR__;

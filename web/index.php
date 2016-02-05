@@ -1,6 +1,6 @@
 <?php
 
-require_once('../autoloader.php');
+require_once('../vendor/autoload.php');
 require_once('../Config/routing.php');
 
 use Core\Router;
@@ -13,4 +13,11 @@ $route = substr($uri, strlen($path));
 $router = new Router();
 $response = $router->run($route);
 
-echo $response;
+
+//$loader = new Twig_Loader_Filesystem('../src/templates');
+//$twig = new Twig_Environment($loader, array(
+//    'cache' => '../vendor/twig/twig/lib/Twig/Cache',
+//));
+//
+//echo $twig->render('index.html.twig');
+

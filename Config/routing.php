@@ -1,5 +1,6 @@
 <?php
 
 $routes = array(
-  '/test/bonjour/' => 'Test:bonjour',
+  '/' => 'Home:home',
+  '/login' => 'Login:login',
   );

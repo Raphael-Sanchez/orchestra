@@ -17,11 +17,11 @@ class ParseExceptionTest extends \PHPUnit_Framework_TestCase
 {
     public function testGetMessage()
     {
-        $exception = new ParseException('Error message', 42, 'foo: bar', '/var/www/app/config.yml');
+        $exception = new ParseException('Error message', 42, 'foo: bar', '/var/www/app/database.yml');
         if (PHP_VERSION_ID >= 50400) {
-            $message = 'Error message in "/var/www/app/config.yml" at line 42 (near "foo: bar")';
+            $message = 'Error message in "/var/www/app/database.yml" at line 42 (near "foo: bar")';
         } else {
-            $message = 'Error message in "\\/var\\/www\\/app\\/config.yml" at line 42 (near "foo: bar")';
+            $message = 'Error message in "\\/var\\/www\\/app\\/database.yml" at line 42 (near "foo: bar")';
         }
 
         $this->assertEquals($message, $exception->getMessage());

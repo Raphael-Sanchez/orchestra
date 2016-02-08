@@ -9,7 +9,7 @@ return array(
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'ORM\\' => array($vendorDir . '/droxyum/supinternet-orm/src'),
     'Logger\\' => array($baseDir . '/src/Logger'),
-    'Entity\\' => array($vendorDir . '/droxyum/supinternet-orm/Entity'),
+    'Entity\\' => array($baseDir . '/Entity', $vendorDir . '/droxyum/supinternet-orm/Entity'),
     'Core\\' => array($baseDir . '/Core'),
     'Controllers\\' => array($baseDir . '/src/Controllers'),
 );

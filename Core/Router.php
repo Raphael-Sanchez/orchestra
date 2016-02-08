@@ -21,6 +21,7 @@ class Router
       return $controller->$parts[1]();
     }
     else {
+      Logger::errorLog($_SERVER);
       $error = new ErrorController();
       $error->error();
     }

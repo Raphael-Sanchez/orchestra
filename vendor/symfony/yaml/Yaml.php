@@ -28,7 +28,7 @@ class Yaml
      *
      *  Usage:
      *  <code>
-     *   $array = Yaml::parse(file_get_contents('config.yml'));
+     *   $array = Yaml::parse(file_get_contents('database.yml'));
      *   print_r($array);
      *  </code>
      *

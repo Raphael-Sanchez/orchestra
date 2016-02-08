@@ -12,4 +12,3 @@ $route = substr($uri, strlen($path));
 
 $router = new Router();
 $response = $router->run($route);
-

@@ -2,5 +2,5 @@
 
 $routes = array(
   '/' => 'Home:home',
-  '/login' => 'Login:login',
+  '/contact' => 'Contact:contact',
   );

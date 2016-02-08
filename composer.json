@@ -1,11 +1,13 @@
 {
     "require": {
-        "twig/twig": "1.*"
+        "twig/twig": "1.*",
+        "droxyum/supinternet-orm": "dev-master"
     },
     "autoload": {
         "psr-4": {
             "Core\\": "Core/",
-            "Controllers\\": "src/Controllers/"
+            "Controllers\\": "src/Controllers/",
+            "Logger\\": "src/Logger/"
         }
     }
 }

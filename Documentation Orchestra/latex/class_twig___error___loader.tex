@@ -1,0 +1,36 @@
+\hypertarget{class_twig___error___loader}{}\section{Référence de la classe Twig\+\_\+\+Error\+\_\+\+Loader}
+\label{class_twig___error___loader}\index{Twig\+\_\+\+Error\+\_\+\+Loader@{Twig\+\_\+\+Error\+\_\+\+Loader}}
+Graphe d\textquotesingle{}héritage de Twig\+\_\+\+Error\+\_\+\+Loader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_twig___error___loader}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \+\_\+\+\_\+construct} (\$message, \$lineno=-\/1, \$filename=null, Exception \$previous=null)\hypertarget{class_twig___error___loader_a61443b1ca6c32f74ff85c2fd550110cf}{}\label{class_twig___error___loader_a61443b1ca6c32f74ff85c2fd550110cf}
+
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Exception thrown when an error occurs during template loading.
+
+Automatic template information guessing is always turned off as if a template cannot be loaded, there is nothing to guess. However, when a template is loaded from another one, then, we need to find the current context and this is automatically done by Twig\+\_\+\+Template\+::display\+With\+Error\+Handling().
+
+This strategy makes \hyperlink{class_twig___environment_af1cc34fcbd8561be8a6075517d107630}{Twig\+\_\+\+Environment\+::resolve\+Template()} much faster.
+
+\begin{DoxyAuthor}{Auteur}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\tt fabien@symfony.\+com} 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 25 du fichier Loader.\+php.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+vendor/twig/twig/lib/\+Twig/\+Error/Loader.\+php\end{DoxyCompactItemize}

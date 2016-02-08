@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>orchestra-framework:  Fichier source de vendor/twig/twig/lib/Twig/Loader/String.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">orchestra-framework
+   </div>
+   <div id="projectbrief">Orchestra is a light framework in PHP5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a class="el" href="dir_98673f2fc2c069b9d97134d585bbcc0d.html">twig</a></li><li class="navelem"><a class="el" href="dir_07774186423e3c21c71abee14be0612f.html">twig</a></li><li class="navelem"><a class="el" href="dir_a11b66d32a94bb2043eeeb28b93f7e7d.html">lib</a></li><li class="navelem"><a class="el" href="dir_20ccadb87c25338a199db4b546bf3342.html">Twig</a></li><li class="navelem"><a class="el" href="dir_c427305858b0242772de755adf687ac4.html">Loader</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">String.php</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This file is part of Twig.</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * (c) 2009 Fabien Potencier</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * For the full copyright and license information, please view the LICENSE</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * file that was distributed with this source code.</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;@trigger_error(<span class="stringliteral">&#39;The Twig_Loader_String class is deprecated since version 1.18.1 and will be removed in 2.0. Use Twig_Loader_Array instead or Twig_Environment::createTemplate().&#39;</span>, E_USER_DEPRECATED);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_twig___loader___string.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_twig___loader___string.html">Twig_Loader_String</a> <span class="keyword">implements</span> <a class="code" href="interface_twig___loader_interface.html">Twig_LoaderInterface</a>, <a class="code" href="interface_twig___exists_loader_interface.html">Twig_ExistsLoaderInterface</a></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_twig___loader___string.html#a8c6017d8ed0800a8d6b201883fcfb4bd">   35</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_twig___loader___string.html#a8c6017d8ed0800a8d6b201883fcfb4bd">getSource</a>($name)</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> $name;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_twig___loader___string.html#a0909de156d39accf2e3c52f4bce3765f">   43</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_twig___loader___string.html#a0909de156d39accf2e3c52f4bce3765f">exists</a>($name)</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_twig___loader___string.html#aaf1587bcc7c8f06e87be6ccaf76fb6ea">   51</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_twig___loader___string.html#aaf1587bcc7c8f06e87be6ccaf76fb6ea">getCacheKey</a>($name)</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> $name;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_twig___loader___string.html#a3ee0419b212dc4f6f1e8a5a615423ad8">   59</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_twig___loader___string.html#a3ee0419b212dc4f6f1e8a5a615423ad8">isFresh</a>($name, $time)</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div><div class="ttc" id="class_twig___loader___string_html_a8c6017d8ed0800a8d6b201883fcfb4bd"><div class="ttname"><a href="class_twig___loader___string.html#a8c6017d8ed0800a8d6b201883fcfb4bd">Twig_Loader_String\getSource</a></div><div class="ttdeci">getSource($name)</div><div class="ttdef"><b>Definition:</b> <a href="_string_8php_source.html#l00035">String.php:35</a></div></div>
+<div class="ttc" id="class_twig___loader___string_html_a0909de156d39accf2e3c52f4bce3765f"><div class="ttname"><a href="class_twig___loader___string.html#a0909de156d39accf2e3c52f4bce3765f">Twig_Loader_String\exists</a></div><div class="ttdeci">exists($name)</div><div class="ttdef"><b>Definition:</b> <a href="_string_8php_source.html#l00043">String.php:43</a></div></div>
+<div class="ttc" id="interface_twig___exists_loader_interface_html"><div class="ttname"><a href="interface_twig___exists_loader_interface.html">Twig_ExistsLoaderInterface</a></div><div class="ttdef"><b>Definition:</b> <a href="_exists_loader_interface_8php_source.html#l00019">ExistsLoaderInterface.php:19</a></div></div>
+<div class="ttc" id="class_twig___loader___string_html_a3ee0419b212dc4f6f1e8a5a615423ad8"><div class="ttname"><a href="class_twig___loader___string.html#a3ee0419b212dc4f6f1e8a5a615423ad8">Twig_Loader_String\isFresh</a></div><div class="ttdeci">isFresh($name, $time)</div><div class="ttdef"><b>Definition:</b> <a href="_string_8php_source.html#l00059">String.php:59</a></div></div>
+<div class="ttc" id="class_twig___loader___string_html_aaf1587bcc7c8f06e87be6ccaf76fb6ea"><div class="ttname"><a href="class_twig___loader___string.html#aaf1587bcc7c8f06e87be6ccaf76fb6ea">Twig_Loader_String\getCacheKey</a></div><div class="ttdeci">getCacheKey($name)</div><div class="ttdef"><b>Definition:</b> <a href="_string_8php_source.html#l00051">String.php:51</a></div></div>
+<div class="ttc" id="class_twig___loader___string_html"><div class="ttname"><a href="class_twig___loader___string.html">Twig_Loader_String</a></div><div class="ttdef"><b>Definition:</b> <a href="_string_8php_source.html#l00030">String.php:30</a></div></div>
+<div class="ttc" id="interface_twig___loader_interface_html"><div class="ttname"><a href="interface_twig___loader_interface.html">Twig_LoaderInterface</a></div><div class="ttdef"><b>Definition:</b> <a href="_loader_interface_8php_source.html#l00017">LoaderInterface.php:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

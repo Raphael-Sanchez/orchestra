@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>orchestra-framework:  Fichier source de vendor/twig/twig/lib/Twig/Node/Expression/Binary/BitwiseOr.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">orchestra-framework
+   </div>
+   <div id="projectbrief">Orchestra is a light framework in PHP5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a class="el" href="dir_98673f2fc2c069b9d97134d585bbcc0d.html">twig</a></li><li class="navelem"><a class="el" href="dir_07774186423e3c21c71abee14be0612f.html">twig</a></li><li class="navelem"><a class="el" href="dir_a11b66d32a94bb2043eeeb28b93f7e7d.html">lib</a></li><li class="navelem"><a class="el" href="dir_20ccadb87c25338a199db4b546bf3342.html">Twig</a></li><li class="navelem"><a class="el" href="dir_8ce453491ea1bebf6e2fc5723a69f545.html">Node</a></li><li class="navelem"><a class="el" href="dir_5817646d63e9078817ccf87813d58932.html">Expression</a></li><li class="navelem"><a class="el" href="dir_874b57a6d6726aa6a29f110074d35882.html">Binary</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">BitwiseOr.php</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This file is part of Twig.</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * (c) 2009 Fabien Potencier</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * (c) 2009 Armin Ronacher</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * For the full copyright and license information, please templates the LICENSE</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * file that was distributed with this source code.</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_twig___node___expression___binary___bitwise_or.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_twig___node___expression___binary___bitwise_or.html">Twig_Node_Expression_Binary_BitwiseOr</a> <span class="keyword">extends</span> <a class="code" href="class_twig___node___expression___binary.html">Twig_Node_Expression_Binary</a></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> operator(<a class="code" href="class_twig___compiler.html">Twig_Compiler</a> $compiler)</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> $compiler-&gt;<a class="code" href="class_twig___compiler.html#ad067731c51a63ace079316e8252fff4b">raw</a>(<span class="charliteral">&#39;|&#39;</span>);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div><div class="ttc" id="class_twig___node___expression___binary___bitwise_or_html"><div class="ttname"><a href="class_twig___node___expression___binary___bitwise_or.html">Twig_Node_Expression_Binary_BitwiseOr</a></div><div class="ttdef"><b>Definition:</b> <a href="_bitwise_or_8php_source.html#l00012">BitwiseOr.php:12</a></div></div>
+<div class="ttc" id="class_twig___compiler_html"><div class="ttname"><a href="class_twig___compiler.html">Twig_Compiler</a></div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8php_source.html#l00018">Compiler.php:18</a></div></div>
+<div class="ttc" id="class_twig___node___expression___binary_html"><div class="ttname"><a href="class_twig___node___expression___binary.html">Twig_Node_Expression_Binary</a></div><div class="ttdef"><b>Definition:</b> <a href="_binary_8php_source.html#l00012">Binary.php:12</a></div></div>
+<div class="ttc" id="class_twig___compiler_html_ad067731c51a63ace079316e8252fff4b"><div class="ttname"><a href="class_twig___compiler.html#ad067731c51a63ace079316e8252fff4b">Twig_Compiler\raw</a></div><div class="ttdeci">raw($string)</div><div class="ttdef"><b>Definition:</b> <a href="_compiler_8php_source.html#l00109">Compiler.php:109</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

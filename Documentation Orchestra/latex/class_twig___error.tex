@@ -1,0 +1,230 @@
+\hypertarget{class_twig___error}{}\section{Référence de la classe Twig\+\_\+\+Error}
+\label{class_twig___error}\index{Twig\+\_\+\+Error@{Twig\+\_\+\+Error}}
+Graphe d\textquotesingle{}héritage de Twig\+\_\+\+Error\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.498328cm]{class_twig___error}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_twig___error_a61443b1ca6c32f74ff85c2fd550110cf}{\+\_\+\+\_\+construct} (\$message, \$lineno=-\/1, \$filename=null, Exception \$previous=null)
+\item 
+\hyperlink{class_twig___error_ae10360028f8c467cf5855bcaf76b091f}{get\+Raw\+Message} ()
+\item 
+\hyperlink{class_twig___error_a7d4dd918a3bd7ea19213e1745e7b4944}{get\+Template\+File} ()
+\item 
+\hyperlink{class_twig___error_aecc0e5e79dece93715f37d05a9bec2ae}{set\+Template\+File} (\$filename)
+\item 
+\hyperlink{class_twig___error_abe0a6ba69feb4cba19f4a408462a976e}{get\+Template\+Line} ()
+\item 
+\hyperlink{class_twig___error_a8c9d5c088f27156f8fffa52222efbe29}{set\+Template\+Line} (\$lineno)
+\item 
+{\bfseries guess} ()\hypertarget{class_twig___error_a16664471dad3413d0fb0370b4068d634}{}\label{class_twig___error_a16664471dad3413d0fb0370b4068d634}
+
+\item 
+\hyperlink{class_twig___error_acfa40ec504c3c792c3b84cf2f1af511d}{\+\_\+\+\_\+call} (\$method, \$arguments)
+\item 
+{\bfseries append\+Message} (\$raw\+Message)\hypertarget{class_twig___error_aea80188b878e626c939e71fa4213d0ac}{}\label{class_twig___error_aea80188b878e626c939e71fa4213d0ac}
+
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries update\+Repr} ()\hypertarget{class_twig___error_a94da5702d909e30f9dafe5f95c67bf1b}{}\label{class_twig___error_a94da5702d909e30f9dafe5f95c67bf1b}
+
+\item 
+{\bfseries guess\+Template\+Info} ()\hypertarget{class_twig___error_ae755138687d06c7ddb918be2c55c215d}{}\label{class_twig___error_ae755138687d06c7ddb918be2c55c215d}
+
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$lineno}\hypertarget{class_twig___error_a865384ce49abf1c78f8aea48c7b5aa48}{}\label{class_twig___error_a865384ce49abf1c78f8aea48c7b5aa48}
+
+\item 
+{\bfseries \$filename}\hypertarget{class_twig___error_a0722441477f957078ee2437054556cbc}{}\label{class_twig___error_a0722441477f957078ee2437054556cbc}
+
+\item 
+{\bfseries \$raw\+Message}\hypertarget{class_twig___error_a51b60eefca71be4dca4091bc91c65cd4}{}\label{class_twig___error_a51b60eefca71be4dca4091bc91c65cd4}
+
+\item 
+{\bfseries \$previous}\hypertarget{class_twig___error_a4774a105bfb14b9d24aa2357408f32f8}{}\label{class_twig___error_a4774a105bfb14b9d24aa2357408f32f8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Twig base exception.
+
+This exception class and its children must only be used when an error occurs during the loading of a template, when a syntax error is detected in a template, or when rendering a template. Other errors must use regular P\+HP exception classes (like when the template cache directory is not writable for instance).
+
+To help debugging template issues, this class tracks the original template name and line where the error occurred.
+
+Whenever possible, you must set these information (original template name and line number) yourself by passing them to the constructor. If some or all these information are not available from where you throw the exception, then this class will guess them automatically (when the line number is set to -\/1 and/or the filename is set to null). As this is a costly operation, this can be disabled by passing false for both the filename and the line number when creating a new instance of this class.
+
+\begin{DoxyAuthor}{Auteur}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\tt fabien@symfony.\+com} 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 34 du fichier Error.\+php.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{Twig\+\_\+\+Error@{Twig\+\_\+\+Error}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Twig\+\_\+\+Error@{Twig\+\_\+\+Error}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+construct(\$message, \$lineno=-\/1, \$filename=null, Exception \$previous=null)}{__construct($message, $lineno=-1, $filename=null, Exception $previous=null)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+\_\+construct (
+\begin{DoxyParamCaption}
+\item[{}]{\$message, }
+\item[{}]{\$lineno = {\ttfamily -\/1}, }
+\item[{}]{\$filename = {\ttfamily null}, }
+\item[{Exception}]{\$previous = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___error_a61443b1ca6c32f74ff85c2fd550110cf}{}\label{class_twig___error_a61443b1ca6c32f74ff85c2fd550110cf}
+Constructor.
+
+Set both the line number and the filename to false to disable automatic guessing of the original template name and line number.
+
+Set the line number to -\/1 to enable its automatic guessing. Set the filename to null to enable its automatic guessing.
+
+By default, automatic guessing is enabled.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$message} & The error message \\
+\hline
+int & {\em \$lineno} & The template line where the error occurred \\
+\hline
+string & {\em \$filename} & The template file name where the error occurred \\
+\hline
+Exception & {\em \$previous} & The previous exception \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 58 du fichier Error.\+php.
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{Twig\+\_\+\+Error@{Twig\+\_\+\+Error}!\+\_\+\+\_\+call@{\+\_\+\+\_\+call}}
+\index{\+\_\+\+\_\+call@{\+\_\+\+\_\+call}!Twig\+\_\+\+Error@{Twig\+\_\+\+Error}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+call(\$method, \$arguments)}{__call($method, $arguments)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+\_\+call (
+\begin{DoxyParamCaption}
+\item[{}]{\$method, }
+\item[{}]{\$arguments}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___error_acfa40ec504c3c792c3b84cf2f1af511d}{}\label{class_twig___error_acfa40ec504c3c792c3b84cf2f1af511d}
+For P\+HP $<$ 5.\+3.\+0, provides access to the get\+Previous() method.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$method} & The method name \\
+\hline
+array & {\em \$arguments} & The parameters to be passed to the method\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Exception The previous exception or null
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Bad\+Method\+Call\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Définition à la ligne 149 du fichier Error.\+php.
+
+\index{Twig\+\_\+\+Error@{Twig\+\_\+\+Error}!get\+Raw\+Message@{get\+Raw\+Message}}
+\index{get\+Raw\+Message@{get\+Raw\+Message}!Twig\+\_\+\+Error@{Twig\+\_\+\+Error}}
+\subsubsection[{\texorpdfstring{get\+Raw\+Message()}{getRawMessage()}}]{\setlength{\rightskip}{0pt plus 5cm}get\+Raw\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___error_ae10360028f8c467cf5855bcaf76b091f}{}\label{class_twig___error_ae10360028f8c467cf5855bcaf76b091f}
+Gets the raw message.
+
+\begin{DoxyReturn}{Renvoie}
+string The raw message 
+\end{DoxyReturn}
+
+
+Définition à la ligne 84 du fichier Error.\+php.
+
+\index{Twig\+\_\+\+Error@{Twig\+\_\+\+Error}!get\+Template\+File@{get\+Template\+File}}
+\index{get\+Template\+File@{get\+Template\+File}!Twig\+\_\+\+Error@{Twig\+\_\+\+Error}}
+\subsubsection[{\texorpdfstring{get\+Template\+File()}{getTemplateFile()}}]{\setlength{\rightskip}{0pt plus 5cm}get\+Template\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___error_a7d4dd918a3bd7ea19213e1745e7b4944}{}\label{class_twig___error_a7d4dd918a3bd7ea19213e1745e7b4944}
+Gets the filename where the error occurred.
+
+\begin{DoxyReturn}{Renvoie}
+string The filename 
+\end{DoxyReturn}
+
+
+Définition à la ligne 94 du fichier Error.\+php.
+
+\index{Twig\+\_\+\+Error@{Twig\+\_\+\+Error}!get\+Template\+Line@{get\+Template\+Line}}
+\index{get\+Template\+Line@{get\+Template\+Line}!Twig\+\_\+\+Error@{Twig\+\_\+\+Error}}
+\subsubsection[{\texorpdfstring{get\+Template\+Line()}{getTemplateLine()}}]{\setlength{\rightskip}{0pt plus 5cm}get\+Template\+Line (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___error_abe0a6ba69feb4cba19f4a408462a976e}{}\label{class_twig___error_abe0a6ba69feb4cba19f4a408462a976e}
+Gets the template line where the error occurred.
+
+\begin{DoxyReturn}{Renvoie}
+int The template line 
+\end{DoxyReturn}
+
+
+Définition à la ligne 116 du fichier Error.\+php.
+
+\index{Twig\+\_\+\+Error@{Twig\+\_\+\+Error}!set\+Template\+File@{set\+Template\+File}}
+\index{set\+Template\+File@{set\+Template\+File}!Twig\+\_\+\+Error@{Twig\+\_\+\+Error}}
+\subsubsection[{\texorpdfstring{set\+Template\+File(\$filename)}{setTemplateFile($filename)}}]{\setlength{\rightskip}{0pt plus 5cm}set\+Template\+File (
+\begin{DoxyParamCaption}
+\item[{}]{\$filename}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___error_aecc0e5e79dece93715f37d05a9bec2ae}{}\label{class_twig___error_aecc0e5e79dece93715f37d05a9bec2ae}
+Sets the filename where the error occurred.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$filename} & The filename \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 104 du fichier Error.\+php.
+
+\index{Twig\+\_\+\+Error@{Twig\+\_\+\+Error}!set\+Template\+Line@{set\+Template\+Line}}
+\index{set\+Template\+Line@{set\+Template\+Line}!Twig\+\_\+\+Error@{Twig\+\_\+\+Error}}
+\subsubsection[{\texorpdfstring{set\+Template\+Line(\$lineno)}{setTemplateLine($lineno)}}]{\setlength{\rightskip}{0pt plus 5cm}set\+Template\+Line (
+\begin{DoxyParamCaption}
+\item[{}]{\$lineno}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___error_a8c9d5c088f27156f8fffa52222efbe29}{}\label{class_twig___error_a8c9d5c088f27156f8fffa52222efbe29}
+Sets the template line where the error occurred.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+int & {\em \$lineno} & The template line \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 126 du fichier Error.\+php.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+vendor/twig/twig/lib/\+Twig/Error.\+php\end{DoxyCompactItemize}

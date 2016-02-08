@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>orchestra-framework:  Fichier source de vendor/twig/twig/lib/Twig/Cache/Filesystem.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">orchestra-framework
+   </div>
+   <div id="projectbrief">Orchestra is a light framework in PHP5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c5da75fdc1d6c57999112ed830c87a3c.html">vendor</a></li><li class="navelem"><a class="el" href="dir_98673f2fc2c069b9d97134d585bbcc0d.html">twig</a></li><li class="navelem"><a class="el" href="dir_07774186423e3c21c71abee14be0612f.html">twig</a></li><li class="navelem"><a class="el" href="dir_a11b66d32a94bb2043eeeb28b93f7e7d.html">lib</a></li><li class="navelem"><a class="el" href="dir_20ccadb87c25338a199db4b546bf3342.html">Twig</a></li><li class="navelem"><a class="el" href="dir_18a6a3bc28698f410ad9448872749e72.html">Cache</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Filesystem.php</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This file is part of Twig.</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * (c) 2015 Fabien Potencier</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * For the full copyright and license information, please templates the LICENSE</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * file that was distributed with this source code.</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_twig___cache___filesystem.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_twig___cache___filesystem.html">Twig_Cache_Filesystem</a> <span class="keyword">implements</span> <a class="code" href="interface_twig___cache_interface.html">Twig_CacheInterface</a></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">const</span> FORCE_BYTECODE_INVALIDATION = 1;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span> $directory;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span> $options;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_twig___cache___filesystem.html#acdbb962b6c9084f9adaa55fb003fd8ed">   28</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_twig___cache___filesystem.html#acdbb962b6c9084f9adaa55fb003fd8ed">__construct</a>($directory, $options = 0)</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        $this-&gt;directory = rtrim($directory, <span class="charliteral">&#39;\/&#39;</span>).<span class="charliteral">&#39;/&#39;</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        $this-&gt;options = $options;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_twig___cache___filesystem.html#aa552341b7edde6c210aef20fdd86986e">   37</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_twig___cache___filesystem.html#aa552341b7edde6c210aef20fdd86986e">generateKey</a>($name, $className)</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        $hash = hash(<span class="stringliteral">&#39;sha256&#39;</span>, $className);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> $this-&gt;directory.$hash[0].$hash[1].<span class="charliteral">&#39;/&#39;</span>.$hash.<span class="stringliteral">&#39;.php&#39;</span>;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_twig___cache___filesystem.html#a8d0a51036af71436a1e8dcc26fc4281d">   47</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_twig___cache___filesystem.html#a8d0a51036af71436a1e8dcc26fc4281d">load</a>($key)</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        @include_once $key;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_twig___cache___filesystem.html#abdff0953b972adfc563b2e2573d4920b">   55</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_twig___cache___filesystem.html#abdff0953b972adfc563b2e2573d4920b">write</a>($key, $content)</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        $dir = dirname($key);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> (!is_dir($dir)) {</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">false</span> === @mkdir($dir, 0777, <span class="keyword">true</span>) &amp;&amp; !is_dir($dir)) {</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(sprintf(<span class="stringliteral">&#39;Unable to create the cache directory (%s).&#39;</span>, $dir));</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        } elseif (!is_writable($dir)) {</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(sprintf(<span class="stringliteral">&#39;Unable to write in the cache directory (%s).&#39;</span>, $dir));</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        $tmpFile = tempnam($dir, basename($key));</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">false</span> !== @file_put_contents($tmpFile, $content) &amp;&amp; @rename($tmpFile, $key)) {</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            @chmod($key, 0666 &amp; ~umask());</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">if</span> (self::FORCE_BYTECODE_INVALIDATION == ($this-&gt;options &amp; self::FORCE_BYTECODE_INVALIDATION)) {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="comment">// Compile cached file into bytecode cache</span></div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">if</span> (function_exists(<span class="stringliteral">&#39;opcache_invalidate&#39;</span>)) {</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    opcache_invalidate($key, <span class="keyword">true</span>);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                } elseif (function_exists(<span class="stringliteral">&#39;apc_compile_file&#39;</span>)) {</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    apc_compile_file($key);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                }</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            }</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">return</span>;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(sprintf(<span class="stringliteral">&#39;Failed to write cache file &quot;%s&quot;.&#39;</span>, $key));</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div><div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_twig___cache___filesystem.html#aff0cbcd61bb5f05632e20fd0baf65714">   88</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_twig___cache___filesystem.html#aff0cbcd61bb5f05632e20fd0baf65714">getTimestamp</a>($key)</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> (!file_exists($key)) {</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) @filemtime($key);</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div><div class="ttc" id="class_twig___cache___filesystem_html_a8d0a51036af71436a1e8dcc26fc4281d"><div class="ttname"><a href="class_twig___cache___filesystem.html#a8d0a51036af71436a1e8dcc26fc4281d">Twig_Cache_Filesystem\load</a></div><div class="ttdeci">load($key)</div><div class="ttdef"><b>Definition:</b> <a href="_cache_2_filesystem_8php_source.html#l00047">Filesystem.php:47</a></div></div>
+<div class="ttc" id="class_twig___cache___filesystem_html"><div class="ttname"><a href="class_twig___cache___filesystem.html">Twig_Cache_Filesystem</a></div><div class="ttdef"><b>Definition:</b> <a href="_cache_2_filesystem_8php_source.html#l00017">Filesystem.php:17</a></div></div>
+<div class="ttc" id="interface_twig___cache_interface_html"><div class="ttname"><a href="interface_twig___cache_interface.html">Twig_CacheInterface</a></div><div class="ttdef"><b>Definition:</b> <a href="_cache_interface_8php_source.html#l00021">CacheInterface.php:21</a></div></div>
+<div class="ttc" id="class_twig___cache___filesystem_html_abdff0953b972adfc563b2e2573d4920b"><div class="ttname"><a href="class_twig___cache___filesystem.html#abdff0953b972adfc563b2e2573d4920b">Twig_Cache_Filesystem\write</a></div><div class="ttdeci">write($key, $content)</div><div class="ttdef"><b>Definition:</b> <a href="_cache_2_filesystem_8php_source.html#l00055">Filesystem.php:55</a></div></div>
+<div class="ttc" id="class_twig___cache___filesystem_html_aa552341b7edde6c210aef20fdd86986e"><div class="ttname"><a href="class_twig___cache___filesystem.html#aa552341b7edde6c210aef20fdd86986e">Twig_Cache_Filesystem\generateKey</a></div><div class="ttdeci">generateKey($name, $className)</div><div class="ttdef"><b>Definition:</b> <a href="_cache_2_filesystem_8php_source.html#l00037">Filesystem.php:37</a></div></div>
+<div class="ttc" id="class_twig___cache___filesystem_html_acdbb962b6c9084f9adaa55fb003fd8ed"><div class="ttname"><a href="class_twig___cache___filesystem.html#acdbb962b6c9084f9adaa55fb003fd8ed">Twig_Cache_Filesystem\__construct</a></div><div class="ttdeci">__construct($directory, $options=0)</div><div class="ttdef"><b>Definition:</b> <a href="_cache_2_filesystem_8php_source.html#l00028">Filesystem.php:28</a></div></div>
+<div class="ttc" id="class_twig___cache___filesystem_html_aff0cbcd61bb5f05632e20fd0baf65714"><div class="ttname"><a href="class_twig___cache___filesystem.html#aff0cbcd61bb5f05632e20fd0baf65714">Twig_Cache_Filesystem\getTimestamp</a></div><div class="ttdeci">getTimestamp($key)</div><div class="ttdef"><b>Definition:</b> <a href="_cache_2_filesystem_8php_source.html#l00088">Filesystem.php:88</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

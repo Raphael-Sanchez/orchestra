@@ -1,0 +1,148 @@
+\hypertarget{class_symfony_1_1_component_1_1_yaml_1_1_inline}{}\section{Référence de la classe Inline}
+\label{class_symfony_1_1_component_1_1_yaml_1_1_inline}\index{Inline@{Inline}}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_symfony_1_1_component_1_1_yaml_1_1_inline_aac3e77ad561ffe26c7132a0d43916231}{parse} (\$value, \$exception\+On\+Invalid\+Type=false, \$object\+Support=false, \$object\+For\+Map=false, \$references=array())
+\item 
+static \hyperlink{class_symfony_1_1_component_1_1_yaml_1_1_inline_abf44b3703d42f0fe1c0c292cf46822f6}{dump} (\$value, \$exception\+On\+Invalid\+Type=false, \$object\+Support=false)
+\item 
+static \hyperlink{class_symfony_1_1_component_1_1_yaml_1_1_inline_a17c1b4efbb0fe81775bc23fb7ad381de}{parse\+Scalar} (\$scalar, \$delimiters=null, \$string\+Delimiters=array(\textquotesingle{}\char`\"{}\textquotesingle{}, \char`\"{}\textquotesingle{}\char`\"{}), \&\$i = 0, \$evaluate = true, \$references = array()) 
+\end{DoxyCompactItemize}
+\subsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+const {\bfseries R\+E\+G\+E\+X\+\_\+\+Q\+U\+O\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG} = \textquotesingle{}(?\+:\char`\"{}(\mbox{[}$^\wedge$\char`\"{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}\mbox{]}$\ast$(?\+:\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}.\mbox{[}$^\wedge$\char`\"{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}\mbox{]}$\ast$)$\ast$)\char`\"{}$\vert$\textbackslash{}\textquotesingle{}(\mbox{[}$^\wedge$\textbackslash{}\textquotesingle{}\mbox{]}$\ast$(?\+:\textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{}\mbox{[}$^\wedge$\textbackslash{}\textquotesingle{}\mbox{]}$\ast$)$\ast$)\textbackslash{}\textquotesingle{})\textquotesingle{}\hypertarget{class_symfony_1_1_component_1_1_yaml_1_1_inline_a87b5c4996630ab02b80f5abece2c2fe0}{}\label{class_symfony_1_1_component_1_1_yaml_1_1_inline_a87b5c4996630ab02b80f5abece2c2fe0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\hyperlink{class_symfony_1_1_component_1_1_yaml_1_1_inline}{Inline} implements a Y\+A\+ML parser/dumper for the Y\+A\+ML inline syntax.
+
+\begin{DoxyAuthor}{Auteur}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\tt fabien@symfony.\+com} 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 22 du fichier Inline.\+php.
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{Symfony\+::\+Component\+::\+Yaml\+::\+Inline@{Symfony\+::\+Component\+::\+Yaml\+::\+Inline}!dump@{dump}}
+\index{dump@{dump}!Symfony\+::\+Component\+::\+Yaml\+::\+Inline@{Symfony\+::\+Component\+::\+Yaml\+::\+Inline}}
+\subsubsection[{\texorpdfstring{dump(\$value, \$exception\+On\+Invalid\+Type=false, \$object\+Support=false)}{dump($value, $exceptionOnInvalidType=false, $objectSupport=false)}}]{\setlength{\rightskip}{0pt plus 5cm}static dump (
+\begin{DoxyParamCaption}
+\item[{}]{\$value, }
+\item[{}]{\$exception\+On\+Invalid\+Type = {\ttfamily false}, }
+\item[{}]{\$object\+Support = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_symfony_1_1_component_1_1_yaml_1_1_inline_abf44b3703d42f0fe1c0c292cf46822f6}{}\label{class_symfony_1_1_component_1_1_yaml_1_1_inline_abf44b3703d42f0fe1c0c292cf46822f6}
+Dumps a given P\+HP variable to a Y\+A\+ML string.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+mixed & {\em \$value} & The P\+HP variable to convert \\
+\hline
+bool & {\em \$exception\+On\+Invalid\+Type} & true if an exception must be thrown on invalid types (a P\+HP resource or object), false otherwise \\
+\hline
+bool & {\em \$object\+Support} & true if object support is enabled, false otherwise\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+string The Y\+A\+ML string representing the P\+HP array
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Dump\+Exception} & When trying to dump P\+HP resource \\
+\hline
+\end{DoxyExceptions}
+
+
+Définition à la ligne 97 du fichier Inline.\+php.
+
+\index{Symfony\+::\+Component\+::\+Yaml\+::\+Inline@{Symfony\+::\+Component\+::\+Yaml\+::\+Inline}!parse@{parse}}
+\index{parse@{parse}!Symfony\+::\+Component\+::\+Yaml\+::\+Inline@{Symfony\+::\+Component\+::\+Yaml\+::\+Inline}}
+\subsubsection[{\texorpdfstring{parse(\$value, \$exception\+On\+Invalid\+Type=false, \$object\+Support=false, \$object\+For\+Map=false, \$references=array())}{parse($value, $exceptionOnInvalidType=false, $objectSupport=false, $objectForMap=false, $references=array())}}]{\setlength{\rightskip}{0pt plus 5cm}static parse (
+\begin{DoxyParamCaption}
+\item[{}]{\$value, }
+\item[{}]{\$exception\+On\+Invalid\+Type = {\ttfamily false}, }
+\item[{}]{\$object\+Support = {\ttfamily false}, }
+\item[{}]{\$object\+For\+Map = {\ttfamily false}, }
+\item[{}]{\$references = {\ttfamily array()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_symfony_1_1_component_1_1_yaml_1_1_inline_aac3e77ad561ffe26c7132a0d43916231}{}\label{class_symfony_1_1_component_1_1_yaml_1_1_inline_aac3e77ad561ffe26c7132a0d43916231}
+Converts a Y\+A\+ML string to a P\+HP array.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$value} & A Y\+A\+ML string \\
+\hline
+bool & {\em \$exception\+On\+Invalid\+Type} & true if an exception must be thrown on invalid types (a P\+HP resource or object), false otherwise \\
+\hline
+bool & {\em \$object\+Support} & true if object support is enabled, false otherwise \\
+\hline
+bool & {\em \$object\+For\+Map} & true if maps should return a std\+Class instead of array() \\
+\hline
+array & {\em \$references} & Mapping of variable names to values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+array A P\+HP array representing the Y\+A\+ML string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Parse\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Définition à la ligne 43 du fichier Inline.\+php.
+
+\index{Symfony\+::\+Component\+::\+Yaml\+::\+Inline@{Symfony\+::\+Component\+::\+Yaml\+::\+Inline}!parse\+Scalar@{parse\+Scalar}}
+\index{parse\+Scalar@{parse\+Scalar}!Symfony\+::\+Component\+::\+Yaml\+::\+Inline@{Symfony\+::\+Component\+::\+Yaml\+::\+Inline}}
+\subsubsection[{\texorpdfstring{parse\+Scalar(\$scalar, \$delimiters=null, \$string\+Delimiters=array(\textquotesingle{}""\textquotesingle{}, ""\textquotesingle{}""), \&\$i = 0, \$evaluate = true, \$references = array()) }{parseScalar($scalar, $delimiters=null, $stringDelimiters=array('"', "'"), &$i = 0, $evaluate = true, $references = array()) }}]{\setlength{\rightskip}{0pt plus 5cm}static parse\+Scalar (
+\begin{DoxyParamCaption}
+\item[{}]{\$scalar, }
+\item[{}]{\$delimiters = {\ttfamily null}, }
+\item[{}]{\$string\+Delimiters = {\ttfamily array(\textquotesingle{}\char`\"{}\textquotesingle{},~\char`\"{}\textquotesingle{}\char`\"{})}, }
+\item[{\&}]{\$i = {\ttfamily 0}, }
+\item[{}]{\$evaluate = {\ttfamily true}, }
+\item[{}]{\$references = {\ttfamily array()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_symfony_1_1_component_1_1_yaml_1_1_inline_a17c1b4efbb0fe81775bc23fb7ad381de}{}\label{class_symfony_1_1_component_1_1_yaml_1_1_inline_a17c1b4efbb0fe81775bc23fb7ad381de}
+Parses a scalar to a Y\+A\+ML string.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$scalar} & \\
+\hline
+string & {\em \$delimiters} & \\
+\hline
+array & {\em \$string\+Delimiters} & \\
+\hline
+int & {\em \&\$i} & \\
+\hline
+bool & {\em \$evaluate} & \\
+\hline
+array & {\em \$references} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+string A Y\+A\+ML string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Parse\+Exception} & When malformed inline Y\+A\+ML string is parsed \\
+\hline
+\end{DoxyExceptions}
+
+
+Définition à la ligne 210 du fichier Inline.\+php.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+vendor/symfony/yaml/Inline.\+php\end{DoxyCompactItemize}

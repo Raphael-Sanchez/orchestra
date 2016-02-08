@@ -1,0 +1,139 @@
+\hypertarget{class_twig___cache___null}{}\section{Référence de la classe Twig\+\_\+\+Cache\+\_\+\+Null}
+\label{class_twig___cache___null}\index{Twig\+\_\+\+Cache\+\_\+\+Null@{Twig\+\_\+\+Cache\+\_\+\+Null}}
+Graphe d\textquotesingle{}héritage de Twig\+\_\+\+Cache\+\_\+\+Null\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_twig___cache___null}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_twig___cache___null_aa552341b7edde6c210aef20fdd86986e}{generate\+Key} (\$name, \$class\+Name)
+\item 
+\hyperlink{class_twig___cache___null_abdff0953b972adfc563b2e2573d4920b}{write} (\$key, \$content)
+\item 
+\hyperlink{class_twig___cache___null_a8d0a51036af71436a1e8dcc26fc4281d}{load} (\$key)
+\item 
+\hyperlink{class_twig___cache___null_aff0cbcd61bb5f05632e20fd0baf65714}{get\+Timestamp} (\$key)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Implements a no-\/cache strategy.
+
+\begin{DoxyAuthor}{Auteur}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\tt fabien@symfony.\+com} 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 17 du fichier Null.\+php.
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{Twig\+\_\+\+Cache\+\_\+\+Null@{Twig\+\_\+\+Cache\+\_\+\+Null}!generate\+Key@{generate\+Key}}
+\index{generate\+Key@{generate\+Key}!Twig\+\_\+\+Cache\+\_\+\+Null@{Twig\+\_\+\+Cache\+\_\+\+Null}}
+\subsubsection[{\texorpdfstring{generate\+Key(\$name, \$class\+Name)}{generateKey($name, $className)}}]{\setlength{\rightskip}{0pt plus 5cm}generate\+Key (
+\begin{DoxyParamCaption}
+\item[{}]{\$name, }
+\item[{}]{\$class\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___cache___null_aa552341b7edde6c210aef20fdd86986e}{}\label{class_twig___cache___null_aa552341b7edde6c210aef20fdd86986e}
+\{Generates a cache key for the given template class name.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$name} & The template name \\
+\hline
+string & {\em \$class\+Name} & The template class name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+string
+\end{DoxyReturn}
+\} 
+
+Implémente \hyperlink{interface_twig___cache_interface_aa552341b7edde6c210aef20fdd86986e}{Twig\+\_\+\+Cache\+Interface}.
+
+
+
+Définition à la ligne 22 du fichier Null.\+php.
+
+\index{Twig\+\_\+\+Cache\+\_\+\+Null@{Twig\+\_\+\+Cache\+\_\+\+Null}!get\+Timestamp@{get\+Timestamp}}
+\index{get\+Timestamp@{get\+Timestamp}!Twig\+\_\+\+Cache\+\_\+\+Null@{Twig\+\_\+\+Cache\+\_\+\+Null}}
+\subsubsection[{\texorpdfstring{get\+Timestamp(\$key)}{getTimestamp($key)}}]{\setlength{\rightskip}{0pt plus 5cm}get\+Timestamp (
+\begin{DoxyParamCaption}
+\item[{}]{\$key}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___cache___null_aff0cbcd61bb5f05632e20fd0baf65714}{}\label{class_twig___cache___null_aff0cbcd61bb5f05632e20fd0baf65714}
+\{Returns the modification timestamp of a key.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$key} & The cache key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int
+\end{DoxyReturn}
+\} 
+
+Implémente \hyperlink{interface_twig___cache_interface_aff0cbcd61bb5f05632e20fd0baf65714}{Twig\+\_\+\+Cache\+Interface}.
+
+
+
+Définition à la ligne 44 du fichier Null.\+php.
+
+\index{Twig\+\_\+\+Cache\+\_\+\+Null@{Twig\+\_\+\+Cache\+\_\+\+Null}!load@{load}}
+\index{load@{load}!Twig\+\_\+\+Cache\+\_\+\+Null@{Twig\+\_\+\+Cache\+\_\+\+Null}}
+\subsubsection[{\texorpdfstring{load(\$key)}{load($key)}}]{\setlength{\rightskip}{0pt plus 5cm}load (
+\begin{DoxyParamCaption}
+\item[{}]{\$key}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___cache___null_a8d0a51036af71436a1e8dcc26fc4281d}{}\label{class_twig___cache___null_a8d0a51036af71436a1e8dcc26fc4281d}
+\{Loads a template from the cache.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$key} & The cache key\\
+\hline
+\end{DoxyParams}
+\} 
+
+Implémente \hyperlink{interface_twig___cache_interface_a8d0a51036af71436a1e8dcc26fc4281d}{Twig\+\_\+\+Cache\+Interface}.
+
+
+
+Définition à la ligne 37 du fichier Null.\+php.
+
+\index{Twig\+\_\+\+Cache\+\_\+\+Null@{Twig\+\_\+\+Cache\+\_\+\+Null}!write@{write}}
+\index{write@{write}!Twig\+\_\+\+Cache\+\_\+\+Null@{Twig\+\_\+\+Cache\+\_\+\+Null}}
+\subsubsection[{\texorpdfstring{write(\$key, \$content)}{write($key, $content)}}]{\setlength{\rightskip}{0pt plus 5cm}write (
+\begin{DoxyParamCaption}
+\item[{}]{\$key, }
+\item[{}]{\$content}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___cache___null_abdff0953b972adfc563b2e2573d4920b}{}\label{class_twig___cache___null_abdff0953b972adfc563b2e2573d4920b}
+\{Writes the compiled template to cache.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$key} & The cache key \\
+\hline
+string & {\em \$content} & The template representation as a P\+HP class\\
+\hline
+\end{DoxyParams}
+\} 
+
+Implémente \hyperlink{interface_twig___cache_interface_abdff0953b972adfc563b2e2573d4920b}{Twig\+\_\+\+Cache\+Interface}.
+
+
+
+Définition à la ligne 30 du fichier Null.\+php.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+vendor/twig/twig/lib/\+Twig/\+Cache/Null.\+php\end{DoxyCompactItemize}

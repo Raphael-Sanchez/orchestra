@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>orchestra-framework: supinternet-orm</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">orchestra-framework
+   </div>
+   <div id="projectbrief">Orchestra is a light framework in PHP5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">supinternet-orm </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><code>composer require droxyum/supinternet-orm dev-master</code> </p><hr/>
+ <h4>Create new connection to database:</h4>
+<p><code>$Connection = new \<a class="el" href="namespace_o_r_m.html">ORM</a>\Connection(host, database, username, password);</code></p>
+<h4>Create new EntityManager:</h4>
+<p><code>$EntityManager = new \<a class="el" href="namespace_o_r_m.html">ORM</a>\Entity\Manager();</code> </p><hr/>
+ <h3>Create new Entity "Post":</h3>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;class Post extends Entity {</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    const TABLE = &#39;posts&#39;;  //Table name</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    protected $id; //Id field (primary key)</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    protected $title; //Title field</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    protected $content; //Content field</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    public function setId($id) { </div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        $this-&gt;id = $id;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    } </div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    public function getId() { </div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        return $this-&gt;id;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    } </div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    public function setTitle($title) { </div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        $this-&gt;title = $title;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    } </div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    public function getTitle() { </div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        return $this-&gt;title;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    } </div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    public function setContent($content) { </div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        $this-&gt;content = $content;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    } </div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    public function getContent() { </div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        return $this-&gt;content;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    } </div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div></div><!-- fragment --><p>### Insert new post: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$Post = new \Entity\Post(); //New post</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;$Post-&gt;setTitle(&#39;My post title&#39;); //Insert title</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;$Post-&gt;setContent(&#39;My post content&#39;); //Insert content</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;$EntityManager-&gt;persist($Post); //Insert post in database</div></div><!-- fragment --><p>### Update post: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$Post = new \Entity\Post(); //New post</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;$Post-&gt;setId(5); //Insert post&#39;s id</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;$Post-&gt;setTitle(&#39;New post title&#39;); //Insert new title</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;$Post-&gt;setContent(&#39;New post content&#39;); //Insert new content</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;$EntityManager-&gt;persist($Post); //Update post in database</div></div><!-- fragment --><p>### Remove post </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$Post = new \Entity\Post(); //New post</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;$Post-&gt;setId(5); //Insert post&#39;s id</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;$EntityManager-&gt;remove($Post); //Update post in database</div></div><!-- fragment --><p>### Find post </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$PostsRepository = $EntityManager-&gt;getRepository(&#39;Entity:Post&#39;); //Get post repository</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;$PostsRepository-&gt;findAll(); //Find all post in database</div></div><!-- fragment --><p>### Find with relationship </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;// New entity</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;//Category.php</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;class Category extends Entity </div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{ </div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    const TABLE = &#39;categories&#39;; </div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    protected $id; </div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    protected $name; </div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    public function setId($id) { </div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        $this-&gt;id = $id;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    } </div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    public function getId() { </div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        return $this-&gt;id;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    } </div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    public function setName($name) { </div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        $this-&gt;name = $name;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    } </div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    public function getName() { </div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        return $this-&gt;name;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    } </div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;// Entity post created (Juste NanyToOne relation is available)</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;//Post.php</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;class Post extends Entity {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    // ...</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    protected $Categories;   // Join field on \Entity\Category</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    public function __construct() {</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        $this-&gt;Categories = new ManyToOne($this, &#39;\Entity\Categories&#39;); //</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    // ...</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;//index.php</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;$PostsRepository = $EntityManager-&gt;getRepository(&#39;Entity:Post&#39;); //Get post repository</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;//Find all post in database with relationship</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;///!\ &#39;doRelations&#39; must be an array </div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;$PostsRepository-&gt;findAll([&#39;doRelations&#39; =&gt;  [&#39;Category&#39;] ]);</div></div><!-- fragment --> <hr/>
+<p>### Create new methode in repository </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;class PostRepository extends Repository { } </div></div><!-- fragment --><p>### Add new methode count </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;public function count($params = [])</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    $Select = new Select(); //New Select request</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    $entity = $this-&gt;Entity; /Get current entity</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    $sql = $Select-&gt;select($this-&gt;Entity-&gt;getAlias())-&gt;from($entity::TABLE)-&gt;toSql(); //Select all fiels, from current entity (use table name with &#39;$entity::TABLE&#39;) and get sql request</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    $executeParams = [</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        &#39;type&#39; =&gt; &#39;SELECT&#39;, //Specify request type</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        &#39;sql&#39; =&gt; $sql, //Specify sql request</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        &#39;fn&#39; =&gt; &#39;Count&#39; //Return function &#39;count&#39;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    ];</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    //To do relationship if they are specify in $params</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    if(!empty($params[&#39;doRelations&#39;]) &amp;&amp; is_array($params[&#39;doRelations&#39;])) {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        $executeParams[&#39;doRelations&#39;] = $params[&#39;doRelations&#39;];</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    //Return result of query (return &#39;fn&#39; returning if isn&#39;t null or false)</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    return QueryBuilder::execute($executeParams);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div></div><!-- fragment --><h3>$execureParams parameters:</h3>
+<ul>
+<li>type: <code>SELECT, UPDATE, REMOVE</code></li>
+<li>fn: <code>Exist (return true or false), Count (return number of rows)</code></li>
+</ul>
+<h3>QueryBuilding:</h3>
+<p>/!\ Methodes can be chainned</p><ul>
+<li><code>$Select = New Select; //Request type select</code></li>
+<li><code>$Update = New Update; //Request type select</code></li>
+<li><code>$Insert = New Insert; //Request type insert</code></li>
+<li><code>$Remove = New Remove; //Request type remove</code></li>
+<li>For more information -&gt; check source code at \ </li>
+</ul>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

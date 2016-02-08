@@ -1,0 +1,107 @@
+\hypertarget{class_symfony_1_1_component_1_1_yaml_1_1_yaml}{}\section{Référence de la classe Yaml}
+\label{class_symfony_1_1_component_1_1_yaml_1_1_yaml}\index{Yaml@{Yaml}}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_symfony_1_1_component_1_1_yaml_1_1_yaml_ac2bb245be7b3c736b0e8d6703b852724}{parse} (\$input, \$exception\+On\+Invalid\+Type=false, \$object\+Support=false, \$object\+For\+Map=false)
+\item 
+static \hyperlink{class_symfony_1_1_component_1_1_yaml_1_1_yaml_ae9e8dbe43eea0393f75c12555a6394be}{dump} (\$array, \$inline=2, \$indent=4, \$exception\+On\+Invalid\+Type=false, \$object\+Support=false)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\hyperlink{class_symfony_1_1_component_1_1_yaml_1_1_yaml}{Yaml} offers convenience methods to load and dump Y\+A\+ML.
+
+\begin{DoxyAuthor}{Auteur}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\tt fabien@symfony.\+com} 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 21 du fichier Yaml.\+php.
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{Symfony\+::\+Component\+::\+Yaml\+::\+Yaml@{Symfony\+::\+Component\+::\+Yaml\+::\+Yaml}!dump@{dump}}
+\index{dump@{dump}!Symfony\+::\+Component\+::\+Yaml\+::\+Yaml@{Symfony\+::\+Component\+::\+Yaml\+::\+Yaml}}
+\subsubsection[{\texorpdfstring{dump(\$array, \$inline=2, \$indent=4, \$exception\+On\+Invalid\+Type=false, \$object\+Support=false)}{dump($array, $inline=2, $indent=4, $exceptionOnInvalidType=false, $objectSupport=false)}}]{\setlength{\rightskip}{0pt plus 5cm}static dump (
+\begin{DoxyParamCaption}
+\item[{}]{\$array, }
+\item[{}]{\$inline = {\ttfamily 2}, }
+\item[{}]{\$indent = {\ttfamily 4}, }
+\item[{}]{\$exception\+On\+Invalid\+Type = {\ttfamily false}, }
+\item[{}]{\$object\+Support = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_symfony_1_1_component_1_1_yaml_1_1_yaml_ae9e8dbe43eea0393f75c12555a6394be}{}\label{class_symfony_1_1_component_1_1_yaml_1_1_yaml_ae9e8dbe43eea0393f75c12555a6394be}
+Dumps a P\+HP array to a Y\+A\+ML string.
+
+The dump method, when supplied with an array, will do its best to convert the array into friendly Y\+A\+ML.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+array & {\em \$array} & P\+HP array \\
+\hline
+int & {\em \$inline} & The level where you switch to inline Y\+A\+ML \\
+\hline
+int & {\em \$indent} & The amount of spaces to use for indentation of nested nodes. \\
+\hline
+bool & {\em \$exception\+On\+Invalid\+Type} & true if an exception must be thrown on invalid types (a P\+HP resource or object), false otherwise \\
+\hline
+bool & {\em \$object\+Support} & true if object support is enabled, false otherwise\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+string A Y\+A\+ML string representing the original P\+HP array 
+\end{DoxyReturn}
+
+
+Définition à la ligne 92 du fichier Yaml.\+php.
+
+\index{Symfony\+::\+Component\+::\+Yaml\+::\+Yaml@{Symfony\+::\+Component\+::\+Yaml\+::\+Yaml}!parse@{parse}}
+\index{parse@{parse}!Symfony\+::\+Component\+::\+Yaml\+::\+Yaml@{Symfony\+::\+Component\+::\+Yaml\+::\+Yaml}}
+\subsubsection[{\texorpdfstring{parse(\$input, \$exception\+On\+Invalid\+Type=false, \$object\+Support=false, \$object\+For\+Map=false)}{parse($input, $exceptionOnInvalidType=false, $objectSupport=false, $objectForMap=false)}}]{\setlength{\rightskip}{0pt plus 5cm}static parse (
+\begin{DoxyParamCaption}
+\item[{}]{\$input, }
+\item[{}]{\$exception\+On\+Invalid\+Type = {\ttfamily false}, }
+\item[{}]{\$object\+Support = {\ttfamily false}, }
+\item[{}]{\$object\+For\+Map = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_symfony_1_1_component_1_1_yaml_1_1_yaml_ac2bb245be7b3c736b0e8d6703b852724}{}\label{class_symfony_1_1_component_1_1_yaml_1_1_yaml_ac2bb245be7b3c736b0e8d6703b852724}
+Parses Y\+A\+ML into a P\+HP array.
+
+The parse method, when supplied with a Y\+A\+ML stream (string or file), will do its best to convert Y\+A\+ML in a file into a P\+HP array.
+
+Usage\+: {\ttfamily  \$array = \hyperlink{class_symfony_1_1_component_1_1_yaml_1_1_yaml_ac2bb245be7b3c736b0e8d6703b852724}{Yaml\+::parse}(file\+\_\+get\+\_\+contents(\textquotesingle{}database.\+yml\textquotesingle{})); print\+\_\+r(\$array); }
+
+As this method accepts both plain strings and file names as an input, you must validate the input before calling this method. Passing a file as an input is a deprecated feature and will be removed in 3.\+0.
+
+Note\+: the ability to pass file names to the \hyperlink{class_symfony_1_1_component_1_1_yaml_1_1_yaml_ac2bb245be7b3c736b0e8d6703b852724}{Yaml\+::parse} method is deprecated since version 2.\+2 and will be removed in 3.\+0. Pass the Y\+A\+ML contents of the file instead.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$input} & Path to a Y\+A\+ML file or a string containing Y\+A\+ML \\
+\hline
+bool & {\em \$exception\+On\+Invalid\+Type} & True if an exception must be thrown on invalid types false otherwise \\
+\hline
+bool & {\em \$object\+Support} & True if object support is enabled, false otherwise \\
+\hline
+bool & {\em \$object\+For\+Map} & True if maps should return a std\+Class instead of array()\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+array The Y\+A\+ML converted to a P\+HP array
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Parse\+Exception} & If the Y\+A\+ML is not valid \\
+\hline
+\end{DoxyExceptions}
+
+
+Définition à la ligne 50 du fichier Yaml.\+php.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+vendor/symfony/yaml/Yaml.\+php\end{DoxyCompactItemize}

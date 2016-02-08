@@ -1,0 +1,110 @@
+\hypertarget{class_twig___tests___environment_test___node_visitor}{}\section{Référence de la classe Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor}
+\label{class_twig___tests___environment_test___node_visitor}\index{Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor@{Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor}}
+Graphe d\textquotesingle{}héritage de Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_twig___tests___environment_test___node_visitor}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_twig___tests___environment_test___node_visitor_ad3bfee38f2bc56df9500da7f20b6e13a}{enter\+Node} (\hyperlink{interface_twig___node_interface}{Twig\+\_\+\+Node\+Interface} \$node, \hyperlink{class_twig___environment}{Twig\+\_\+\+Environment} \$env)
+\item 
+\hyperlink{class_twig___tests___environment_test___node_visitor_a436bb1ae16511148e860e5cfa2cad88f}{leave\+Node} (\hyperlink{interface_twig___node_interface}{Twig\+\_\+\+Node\+Interface} \$node, \hyperlink{class_twig___environment}{Twig\+\_\+\+Environment} \$env)
+\item 
+\hyperlink{class_twig___tests___environment_test___node_visitor_a1e7a3c168dcd0901a0d2669c67575b55}{get\+Priority} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+
+
+Définition à la ligne 489 du fichier Environment\+Test.\+php.
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor@{Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor}!enter\+Node@{enter\+Node}}
+\index{enter\+Node@{enter\+Node}!Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor@{Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor}}
+\subsubsection[{\texorpdfstring{enter\+Node(\+Twig\+\_\+\+Node\+Interface \$node, Twig\+\_\+\+Environment \$env)}{enterNode(Twig_NodeInterface $node, Twig_Environment $env)}}]{\setlength{\rightskip}{0pt plus 5cm}enter\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Twig\+\_\+\+Node\+Interface}}]{\$node, }
+\item[{{\bf Twig\+\_\+\+Environment}}]{\$env}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___tests___environment_test___node_visitor_ad3bfee38f2bc56df9500da7f20b6e13a}{}\label{class_twig___tests___environment_test___node_visitor_ad3bfee38f2bc56df9500da7f20b6e13a}
+Called before child nodes are visited.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\hyperlink{interface_twig___node_interface}{Twig\+\_\+\+Node\+Interface} & {\em \$node} & The node to visit \\
+\hline
+\hyperlink{class_twig___environment}{Twig\+\_\+\+Environment} & {\em \$env} & The Twig environment instance\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{interface_twig___node_interface}{Twig\+\_\+\+Node\+Interface} The modified node 
+\end{DoxyReturn}
+
+
+Implémente \hyperlink{interface_twig___node_visitor_interface_ad3bfee38f2bc56df9500da7f20b6e13a}{Twig\+\_\+\+Node\+Visitor\+Interface}.
+
+
+
+Définition à la ligne 491 du fichier Environment\+Test.\+php.
+
+\index{Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor@{Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor}!get\+Priority@{get\+Priority}}
+\index{get\+Priority@{get\+Priority}!Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor@{Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor}}
+\subsubsection[{\texorpdfstring{get\+Priority()}{getPriority()}}]{\setlength{\rightskip}{0pt plus 5cm}get\+Priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___tests___environment_test___node_visitor_a1e7a3c168dcd0901a0d2669c67575b55}{}\label{class_twig___tests___environment_test___node_visitor_a1e7a3c168dcd0901a0d2669c67575b55}
+Returns the priority for this visitor.
+
+Priority should be between -\/10 and 10 (0 is the default).
+
+\begin{DoxyReturn}{Renvoie}
+int The priority level 
+\end{DoxyReturn}
+
+
+Implémente \hyperlink{interface_twig___node_visitor_interface_a1e7a3c168dcd0901a0d2669c67575b55}{Twig\+\_\+\+Node\+Visitor\+Interface}.
+
+
+
+Définition à la ligne 501 du fichier Environment\+Test.\+php.
+
+\index{Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor@{Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor}!leave\+Node@{leave\+Node}}
+\index{leave\+Node@{leave\+Node}!Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor@{Twig\+\_\+\+Tests\+\_\+\+Environment\+Test\+\_\+\+Node\+Visitor}}
+\subsubsection[{\texorpdfstring{leave\+Node(\+Twig\+\_\+\+Node\+Interface \$node, Twig\+\_\+\+Environment \$env)}{leaveNode(Twig_NodeInterface $node, Twig_Environment $env)}}]{\setlength{\rightskip}{0pt plus 5cm}leave\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Twig\+\_\+\+Node\+Interface}}]{\$node, }
+\item[{{\bf Twig\+\_\+\+Environment}}]{\$env}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___tests___environment_test___node_visitor_a436bb1ae16511148e860e5cfa2cad88f}{}\label{class_twig___tests___environment_test___node_visitor_a436bb1ae16511148e860e5cfa2cad88f}
+Called after child nodes are visited.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\hyperlink{interface_twig___node_interface}{Twig\+\_\+\+Node\+Interface} & {\em \$node} & The node to visit \\
+\hline
+\hyperlink{class_twig___environment}{Twig\+\_\+\+Environment} & {\em \$env} & The Twig environment instance\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Twig\+\_\+\+Node\+Interface$\vert$false The modified node or false if the node must be removed 
+\end{DoxyReturn}
+
+
+Implémente \hyperlink{interface_twig___node_visitor_interface_a436bb1ae16511148e860e5cfa2cad88f}{Twig\+\_\+\+Node\+Visitor\+Interface}.
+
+
+
+Définition à la ligne 496 du fichier Environment\+Test.\+php.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+vendor/twig/twig/test/\+Twig/\+Tests/Environment\+Test.\+php\end{DoxyCompactItemize}

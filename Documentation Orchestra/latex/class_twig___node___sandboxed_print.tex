@@ -1,0 +1,86 @@
+\hypertarget{class_twig___node___sandboxed_print}{}\section{Référence de la classe Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print}
+\label{class_twig___node___sandboxed_print}\index{Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print@{Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print}}
+Graphe d\textquotesingle{}héritage de Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_twig___node___sandboxed_print}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_twig___node___sandboxed_print_a4e0faa87c3fae583620b84d3607085da}{compile} (\hyperlink{class_twig___compiler}{Twig\+\_\+\+Compiler} \$compiler)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_twig___node___sandboxed_print_ae761088e1a4d87e5ddfc47b0376c340d}{remove\+Node\+Filter} (\$node)
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+\hyperlink{class_twig___node___sandboxed_print}{Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print} adds a check for the \+\_\+\+\_\+to\+String() method when the variable is an object and the sandbox is activated.
+
+When there is a simple Print statement, like \{\{ article \}\}, and if the sandbox is enabled, we need to check that the \+\_\+\+\_\+to\+String() method is allowed if \textquotesingle{}article\textquotesingle{} is an object.
+
+\begin{DoxyAuthor}{Auteur}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\tt fabien@symfony.\+com} 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 22 du fichier Sandboxed\+Print.\+php.
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print@{Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print}!compile@{compile}}
+\index{compile@{compile}!Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print@{Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print}}
+\subsubsection[{\texorpdfstring{compile(\+Twig\+\_\+\+Compiler \$compiler)}{compile(Twig_Compiler $compiler)}}]{\setlength{\rightskip}{0pt plus 5cm}compile (
+\begin{DoxyParamCaption}
+\item[{{\bf Twig\+\_\+\+Compiler}}]{\$compiler}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___node___sandboxed_print_a4e0faa87c3fae583620b84d3607085da}{}\label{class_twig___node___sandboxed_print_a4e0faa87c3fae583620b84d3607085da}
+Compiles the node to P\+HP.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\hyperlink{class_twig___compiler}{Twig\+\_\+\+Compiler} & {\em \$compiler} & A \hyperlink{class_twig___compiler}{Twig\+\_\+\+Compiler} instance \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{interface_twig___node_interface_a4e0faa87c3fae583620b84d3607085da}{Twig\+\_\+\+Node\+Interface}.
+
+
+
+Définition à la ligne 24 du fichier Sandboxed\+Print.\+php.
+
+\index{Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print@{Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print}!remove\+Node\+Filter@{remove\+Node\+Filter}}
+\index{remove\+Node\+Filter@{remove\+Node\+Filter}!Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print@{Twig\+\_\+\+Node\+\_\+\+Sandboxed\+Print}}
+\subsubsection[{\texorpdfstring{remove\+Node\+Filter(\$node)}{removeNodeFilter($node)}}]{\setlength{\rightskip}{0pt plus 5cm}remove\+Node\+Filter (
+\begin{DoxyParamCaption}
+\item[{}]{\$node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_twig___node___sandboxed_print_ae761088e1a4d87e5ddfc47b0376c340d}{}\label{class_twig___node___sandboxed_print_ae761088e1a4d87e5ddfc47b0376c340d}
+Removes node filters.
+
+This is mostly needed when another visitor adds filters (like the escaper one).
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\hyperlink{class_twig___node}{Twig\+\_\+\+Node} & {\em \$node} & A Node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{class_twig___node}{Twig\+\_\+\+Node} 
+\end{DoxyReturn}
+
+
+Définition à la ligne 43 du fichier Sandboxed\+Print.\+php.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+vendor/twig/twig/lib/\+Twig/\+Node/Sandboxed\+Print.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,183 @@
+{\ttfamily composer require droxyum/supinternet-\/orm dev-\/master} 
+
+ \paragraph*{Create new connection to database\+:}
+
+{\ttfamily \$\+Connection = new \textbackslash{}\hyperlink{namespace_o_r_m}{O\+RM}\textbackslash{}Connection(host, database, username, password);}
+
+\paragraph*{Create new Entity\+Manager\+:}
+
+{\ttfamily \$\+Entity\+Manager = new \textbackslash{}\hyperlink{namespace_o_r_m}{O\+RM}\textbackslash{}Entity\textbackslash{}Manager();} 
+
+ \subsubsection*{Create new Entity \char`\"{}\+Post\char`\"{}\+:}
+
+
+\begin{DoxyCode}
+1 class Post extends Entity \{
+2     const TABLE = 'posts';  //Table name
+3     protected $id; //Id field (primary key)
+4     protected $title; //Title field
+5     protected $content; //Content field
+6 
+7     public function setId($id) \{ 
+8         $this->id = $id;
+9     \} 
+10 
+11     public function getId() \{ 
+12         return $this->id;
+13     \} 
+14 
+15     public function setTitle($title) \{ 
+16         $this->title = $title;
+17     \} 
+18 
+19     public function getTitle() \{ 
+20         return $this->title;
+21     \} 
+22 
+23     public function setContent($content) \{ 
+24         $this->content = $content;
+25     \} 
+26 
+27     public function getContent() \{ 
+28         return $this->content;
+29     \} 
+30 
+31 \}
+\end{DoxyCode}
+
+
+\#\#\# Insert new post\+: 
+\begin{DoxyCode}
+1 $Post = new \(\backslash\)Entity\(\backslash\)Post(); //New post
+2 $Post->setTitle('My post title'); //Insert title
+3 $Post->setContent('My post content'); //Insert content
+4 $EntityManager->persist($Post); //Insert post in database
+\end{DoxyCode}
+
+
+\#\#\# Update post\+: 
+\begin{DoxyCode}
+1 $Post = new \(\backslash\)Entity\(\backslash\)Post(); //New post
+2 $Post->setId(5); //Insert post's id
+3 $Post->setTitle('New post title'); //Insert new title
+4 $Post->setContent('New post content'); //Insert new content
+5 $EntityManager->persist($Post); //Update post in database
+\end{DoxyCode}
+
+
+\#\#\# Remove post 
+\begin{DoxyCode}
+1 $Post = new \(\backslash\)Entity\(\backslash\)Post(); //New post
+2 $Post->setId(5); //Insert post's id
+3 $EntityManager->remove($Post); //Update post in database
+\end{DoxyCode}
+
+
+\#\#\# Find post 
+\begin{DoxyCode}
+1 $PostsRepository = $EntityManager->getRepository('Entity:Post'); //Get post repository
+2 $PostsRepository->findAll(); //Find all post in database
+\end{DoxyCode}
+
+
+\#\#\# Find with relationship 
+\begin{DoxyCode}
+1 // New entity
+2 //Category.php
+3 class Category extends Entity 
+4 \{ 
+5     const TABLE = 'categories'; 
+6     protected $id; 
+7     protected $name; 
+8 
+9 
+10     public function setId($id) \{ 
+11         $this->id = $id;
+12     \} 
+13 
+14     public function getId() \{ 
+15         return $this->id;
+16     \} 
+17 
+18     public function setName($name) \{ 
+19         $this->name = $name;
+20     \} 
+21 
+22     public function getName() \{ 
+23         return $this->name;
+24     \} 
+25 
+26 \}
+27 
+28 // Entity post created (Juste NanyToOne relation is available)
+29 //Post.php
+30 class Post extends Entity \{
+31     // ...
+32     protected $Categories;   // Join field on \(\backslash\)Entity\(\backslash\)Category
+33     public function \_\_construct() \{
+34         $this->Categories = new ManyToOne($this, '\(\backslash\)Entity\(\backslash\)Categories'); //
+35     \}
+36     // ...
+37 \}
+38 
+39 //index.php
+40 $PostsRepository = $EntityManager->getRepository('Entity:Post'); //Get post repository
+41 
+42 //Find all post in database with relationship
+43 ///!\(\backslash\) 'doRelations' must be an array 
+44 $PostsRepository->findAll(['doRelations' =>  ['Category'] ]);
+\end{DoxyCode}
+ 
+
+
+
+\#\#\# Create new methode in repository 
+\begin{DoxyCode}
+1 class PostRepository extends Repository \{ \} 
+\end{DoxyCode}
+
+
+\#\#\# Add new methode count 
+\begin{DoxyCode}
+1 public function count($params = [])
+2 \{
+3     $Select = new Select(); //New Select request
+4     $entity = $this->Entity; /Get current entity
+5     $sql = $Select->select($this->Entity->getAlias())->from($entity::TABLE)->toSql(); //Select all fiels,
+       from current entity (use table name with '$entity::TABLE') and get sql request
+6 
+7     $executeParams = [
+8         'type' => 'SELECT', //Specify request type
+9         'sql' => $sql, //Specify sql request
+10         'fn' => 'Count' //Return function 'count'
+11     ];
+12 
+13     //To do relationship if they are specify in $params
+14     if(!empty($params['doRelations']) && is\_array($params['doRelations'])) \{
+15         $executeParams['doRelations'] = $params['doRelations'];
+16     \}
+17 
+18     //Return result of query (return 'fn' returning if isn't null or false)
+19     return QueryBuilder::execute($executeParams);
+20 \}
+\end{DoxyCode}
+
+
+\subsubsection*{\$execure\+Params parameters\+:}
+
+
+\begin{DoxyItemize}
+\item type\+: {\ttfamily S\+E\+L\+E\+CT, U\+P\+D\+A\+TE, R\+E\+M\+O\+VE}
+\item fn\+: {\ttfamily Exist (return true or false), Count (return number of rows)}
+\end{DoxyItemize}
+
+\subsubsection*{Query\+Building\+:}
+
+/!\textbackslash{} Methodes can be chainned
+\begin{DoxyItemize}
+\item {\ttfamily \$\+Select = New Select; //\+Request type select}
+\item {\ttfamily \$\+Update = New Update; //\+Request type select}
+\item {\ttfamily \$\+Insert = New Insert; //\+Request type insert}
+\item {\ttfamily \$\+Remove = New Remove; //\+Request type remove}
+\item For more information -\/$>$ check source code at \textbackslash{} 
+\end{DoxyItemize}

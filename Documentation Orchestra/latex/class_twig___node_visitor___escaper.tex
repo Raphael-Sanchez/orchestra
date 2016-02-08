@@ -1,0 +1,122 @@
+\hypertarget{class_twig___node_visitor___escaper}{}\section{Référence de la classe Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper}
+\label{class_twig___node_visitor___escaper}\index{Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper@{Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper}}
+Graphe d\textquotesingle{}héritage de Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_twig___node_visitor___escaper}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_twig___node_visitor___escaper_a1e7a3c168dcd0901a0d2669c67575b55}{get\+Priority} ()
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_twig___node_visitor___escaper_a58d59325d3add0c1004f6a5cfb2562af}{do\+Enter\+Node} (\hyperlink{class_twig___node}{Twig\+\_\+\+Node} \$node, \hyperlink{class_twig___environment}{Twig\+\_\+\+Environment} \$env)
+\item 
+\hyperlink{class_twig___node_visitor___escaper_a7e9db0312cbd70344096235921930dd2}{do\+Leave\+Node} (\hyperlink{class_twig___node}{Twig\+\_\+\+Node} \$node, \hyperlink{class_twig___environment}{Twig\+\_\+\+Environment} \$env)
+\item 
+{\bfseries escape\+Print\+Node} (\hyperlink{class_twig___node___print}{Twig\+\_\+\+Node\+\_\+\+Print} \$node, \hyperlink{class_twig___environment}{Twig\+\_\+\+Environment} \$env, \$type)\hypertarget{class_twig___node_visitor___escaper_aa8c0b3e95013477df545adf86975eeea}{}\label{class_twig___node_visitor___escaper_aa8c0b3e95013477df545adf86975eeea}
+
+\item 
+{\bfseries pre\+Escape\+Filter\+Node} (\hyperlink{class_twig___node___expression___filter}{Twig\+\_\+\+Node\+\_\+\+Expression\+\_\+\+Filter} \$filter, \hyperlink{class_twig___environment}{Twig\+\_\+\+Environment} \$env)\hypertarget{class_twig___node_visitor___escaper_a733f6ed9e40407782a76a2b7a547297f}{}\label{class_twig___node_visitor___escaper_a733f6ed9e40407782a76a2b7a547297f}
+
+\item 
+{\bfseries is\+Safe\+For} (\$type, \hyperlink{interface_twig___node_interface}{Twig\+\_\+\+Node\+Interface} \$expression, \$env)\hypertarget{class_twig___node_visitor___escaper_a534f16ca20412d8dc20ed1debaf6fa78}{}\label{class_twig___node_visitor___escaper_a534f16ca20412d8dc20ed1debaf6fa78}
+
+\item 
+{\bfseries need\+Escaping} (\hyperlink{class_twig___environment}{Twig\+\_\+\+Environment} \$env)\hypertarget{class_twig___node_visitor___escaper_ab5954ee5479cde965b278d436387e592}{}\label{class_twig___node_visitor___escaper_ab5954ee5479cde965b278d436387e592}
+
+\item 
+{\bfseries get\+Escaper\+Filter} (\$type, \hyperlink{interface_twig___node_interface}{Twig\+\_\+\+Node\+Interface} \$node)\hypertarget{class_twig___node_visitor___escaper_a2a244aea72aab9d1b6de91ffd4babfaf}{}\label{class_twig___node_visitor___escaper_a2a244aea72aab9d1b6de91ffd4babfaf}
+
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$status\+Stack} = array()\hypertarget{class_twig___node_visitor___escaper_a5188483cd1e2d2c6609d2a642e72c44a}{}\label{class_twig___node_visitor___escaper_a5188483cd1e2d2c6609d2a642e72c44a}
+
+\item 
+{\bfseries \$blocks} = array()\hypertarget{class_twig___node_visitor___escaper_a320aeae1df42ee73ab4b3d9f7cf4ef3f}{}\label{class_twig___node_visitor___escaper_a320aeae1df42ee73ab4b3d9f7cf4ef3f}
+
+\item 
+{\bfseries \$safe\+Analysis}\hypertarget{class_twig___node_visitor___escaper_aa0090a6a2f00fcb39fa723d6a79b53cb}{}\label{class_twig___node_visitor___escaper_aa0090a6a2f00fcb39fa723d6a79b53cb}
+
+\item 
+{\bfseries \$traverser}\hypertarget{class_twig___node_visitor___escaper_ae6725770c4bf11723bd3586bc0699c82}{}\label{class_twig___node_visitor___escaper_ae6725770c4bf11723bd3586bc0699c82}
+
+\item 
+{\bfseries \$default\+Strategy} = false\hypertarget{class_twig___node_visitor___escaper_add8b7fa48484c8d41707819868a0b32f}{}\label{class_twig___node_visitor___escaper_add8b7fa48484c8d41707819868a0b32f}
+
+\item 
+{\bfseries \$safe\+Vars} = array()\hypertarget{class_twig___node_visitor___escaper_ac4491da07b27e3c0f9b37962428e567c}{}\label{class_twig___node_visitor___escaper_ac4491da07b27e3c0f9b37962428e567c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\hyperlink{class_twig___node_visitor___escaper}{Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper} implements output escaping.
+
+\begin{DoxyAuthor}{Auteur}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\tt fabien@symfony.\+com} 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 17 du fichier Escaper.\+php.
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper@{Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper}!do\+Enter\+Node@{do\+Enter\+Node}}
+\index{do\+Enter\+Node@{do\+Enter\+Node}!Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper@{Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper}}
+\subsubsection[{\texorpdfstring{do\+Enter\+Node(\+Twig\+\_\+\+Node \$node, Twig\+\_\+\+Environment \$env)}{doEnterNode(Twig_Node $node, Twig_Environment $env)}}]{\setlength{\rightskip}{0pt plus 5cm}do\+Enter\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Twig\+\_\+\+Node}}]{\$node, }
+\item[{{\bf Twig\+\_\+\+Environment}}]{\$env}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_twig___node_visitor___escaper_a58d59325d3add0c1004f6a5cfb2562af}{}\label{class_twig___node_visitor___escaper_a58d59325d3add0c1004f6a5cfb2562af}
+\{\} 
+
+Définition à la ligne 34 du fichier Escaper.\+php.
+
+\index{Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper@{Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper}!do\+Leave\+Node@{do\+Leave\+Node}}
+\index{do\+Leave\+Node@{do\+Leave\+Node}!Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper@{Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper}}
+\subsubsection[{\texorpdfstring{do\+Leave\+Node(\+Twig\+\_\+\+Node \$node, Twig\+\_\+\+Environment \$env)}{doLeaveNode(Twig_Node $node, Twig_Environment $env)}}]{\setlength{\rightskip}{0pt plus 5cm}do\+Leave\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Twig\+\_\+\+Node}}]{\$node, }
+\item[{{\bf Twig\+\_\+\+Environment}}]{\$env}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_twig___node_visitor___escaper_a7e9db0312cbd70344096235921930dd2}{}\label{class_twig___node_visitor___escaper_a7e9db0312cbd70344096235921930dd2}
+\{\} 
+
+Définition à la ligne 55 du fichier Escaper.\+php.
+
+\index{Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper@{Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper}!get\+Priority@{get\+Priority}}
+\index{get\+Priority@{get\+Priority}!Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper@{Twig\+\_\+\+Node\+Visitor\+\_\+\+Escaper}}
+\subsubsection[{\texorpdfstring{get\+Priority()}{getPriority()}}]{\setlength{\rightskip}{0pt plus 5cm}get\+Priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_twig___node_visitor___escaper_a1e7a3c168dcd0901a0d2669c67575b55}{}\label{class_twig___node_visitor___escaper_a1e7a3c168dcd0901a0d2669c67575b55}
+\{Returns the priority for this visitor.
+
+Priority should be between -\/10 and 10 (0 is the default).
+
+\begin{DoxyReturn}{Renvoie}
+int The priority level
+\end{DoxyReturn}
+\} 
+
+Implémente \hyperlink{interface_twig___node_visitor_interface_a1e7a3c168dcd0901a0d2669c67575b55}{Twig\+\_\+\+Node\+Visitor\+Interface}.
+
+
+
+Définition à la ligne 153 du fichier Escaper.\+php.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+vendor/twig/twig/lib/\+Twig/\+Node\+Visitor/Escaper.\+php\end{DoxyCompactItemize}

@@ -13,11 +13,3 @@ $route = substr($uri, strlen($path));
 $router = new Router();
 $response = $router->run($route);
 
-
-//$loader = new Twig_Loader_Filesystem('../src/templates');
-//$twig = new Twig_Environment($loader, array(
-//    'cache' => '../vendor/twig/twig/lib/Twig/Cache',
-//));
-//
-//echo $twig->render('index.html.twig');
-

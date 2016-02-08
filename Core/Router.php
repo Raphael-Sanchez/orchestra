@@ -2,7 +2,9 @@
 
 namespace Core;
 
-use Controllers;
+use Controllers\LoginController;
+use Controllers\HomeController;
+use Controllers\ErrorController;
 
 class Router
 {
@@ -13,8 +15,11 @@ class Router
     if (!empty($routes[$route]))
     {
       $parts = explode(':', $routes[$route]);
-      $controller_name = "Controllers\\" . $parts[0] . 'Controller';
+      $controller_name = 'Controllers\\' . $parts[0] . 'Controller';
+      var_dump($controller_name);
+
       $controller = new $controller_name;
+
       return $controller->$parts[1]();
     }
     else {

@@ -1,2 +1,15 @@
+<files .htaccess>
+    Order allow,deny
+    Deny from all
+</files>
+
+
+DirectoryIndex index.php
 RewriteEngine On
-RewriteRule .* index.php
+RewriteCond ${REQUEST_URI} ^.+$
+RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g|png|js|css|swf|php|ico|txt|pdf|xml)$ [OR]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -l
+RewriteRule ^ - [L]
+RewriteRule .* index.php [PT]
